@@ -39,6 +39,8 @@ function objToSql(ob) {
     return arr.toString();
 }
 
+const tableInput = "burgers";
+
 // Object for all our SQL statement functions.
 const orm = {
     selectAll: (tableInput, cb) => {
