@@ -1,11 +1,12 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
-$(document).ready(function () {
-    $(".change-devoured").on("click", function (event) {
-        var id = $(this).data("id");
-        var newDevoured = $(this).data("newdevoured");
+$(function () {
 
-        var newDevouredState = {
-            devoured: newDevoured
+    $(".change-devoured").on("click", function (event) {
+        let id = $(this).data("id");
+        let newDevoured = $(this).data("newdevoured");
+
+        let newDevouredState = {
+            devoured: 0
         };
 
         // Send the PUT request.
@@ -21,13 +22,14 @@ $(document).ready(function () {
         );
     });
 
+
     $(".create-form").on("submit", function (event) {
         // Make sure to preventDefault on a submit event.
         event.preventDefault();
 
-        var newBurger = {
-            name: $("#bg").val().trim(),
-            devoured: $("[name=devoured]:checked").val().trim()
+        let newBurger = {
+            burger_name: $("#bg").val().trim(),
+            devoured: 0
         };
 
         // Send the POST request.
@@ -42,6 +44,7 @@ $(document).ready(function () {
             }
         );
     });
+
 
 
 });
