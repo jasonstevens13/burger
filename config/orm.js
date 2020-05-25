@@ -17,7 +17,7 @@ const orm = {
         burger.devoured = 0;
         connection.query(queryString, [
             burger.burger_name, burger.devoured
-        ] function (err, result) {
+        ], function (err, result) {
             if (err) {
                 throw err;
             }
@@ -30,7 +30,7 @@ const orm = {
 
         connection.query(queryString, [
             burger.burger_name, burger.devoured
-        ] function (err, result) {
+        ], function (err, result) {
             if (err) {
                 throw err;
             }
