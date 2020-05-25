@@ -43,7 +43,7 @@ const tableInput = "burgers";
 
 // Object for all our SQL statement functions.
 const orm = {
-    selectAll: (tableInput, cb) => {
+    selectAll: (cb) => {
         var queryString = "SELECT * FROM " + tableInput + ";";
         connection.query(queryString, function (err, result) {
             if (err) {
