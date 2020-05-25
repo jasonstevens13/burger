@@ -5,13 +5,11 @@ require('dotenv').config();
 const connection = mysql.createConnection({
     host: "localhost",
 
-    // Your port; if not 3306
     port: 3306,
 
-    // Your username
     user: "root",
 
-    // Your password
+    // dotenv npm used to mask personal password
     password: process.env.DB_PASSWORD,
     database: "burgers_db"
 });

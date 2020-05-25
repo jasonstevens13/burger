@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-// Import the model (cat.js) to use its database functions.
+// Import the model (burger.js) to use its mysql database orm functions.
 const burger = require("../models/burger");
 
 
@@ -28,8 +28,6 @@ router.post("/api/burger", function (req, res) {
 
 router.put("/api/burger/:id", function (req, res) {
     let condition = "id = " + req.params.id;
-
-    console.log("condition", condition);
 
     burger.updateOne({
         devoured: req.body.devoured
