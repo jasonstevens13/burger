@@ -1,4 +1,4 @@
-const connection = require("../config/connection.js");
+const connection = require("./connection.js");
 
 // The following code has been provided as a template, courtesy of Trilogy Inc. 
 // Helper function for SQL syntax.
