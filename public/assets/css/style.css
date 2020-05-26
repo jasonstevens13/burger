@@ -26,3 +26,9 @@ li {
   .change-devoured{
     display: inline-block;
   }
+
+  #burgerPic{
+    max-height: 400px;
+    max-width: 400px;
+
+  }
