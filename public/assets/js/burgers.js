@@ -5,9 +5,20 @@ $(function () {
         let id = $(this).data("id");
         let newDevoured = $(this).data("newdevoured");
 
-        let newDevouredState = {
-            devoured: 1
-        };
+        let newDevouredState;
+
+        // if statement 
+
+        if (newDevoured === false) {
+            newDevouredState = {
+                devoured: 1
+            }
+        } else {
+            newDevouredState = {
+                devoured: 0
+            }
+        }
+
 
         // Send the PUT request.
         $.ajax("/api/burgers/" + id, {

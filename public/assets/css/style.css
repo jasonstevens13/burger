@@ -21,4 +21,8 @@ li {
   body {
       background: orange;
   }
-  
+
+
+  .change-devoured{
+    display: inline-block;
+  }
