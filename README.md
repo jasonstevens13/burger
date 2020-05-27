@@ -1,6 +1,6 @@
 # Burger App
 A full stack of stacked burgers to eat. An app that exemplifies a full stack app in action.
-![screenshot](./assets/imgs/burgerapp.JPG)
+![screenshot](./assets/imgs/burgerapp.jpg)
 
 
 ## Table of Contents
