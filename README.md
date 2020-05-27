@@ -2,7 +2,7 @@
 A full stack of stacked burgers to eat. An app that exemplifies a full stack app in action.
 
 Find deployed app here:   https://arcane-wave-81750.herokuapp.com/
-
+Featured in my portfolio: https://jasonstevens13.github.io/portfolio-jason-stevens/
 
 ![screenshot](https://github.com/jasonstevens13/burger/blob/master/public/assets/imgs/burgerapp.JPG)
 
