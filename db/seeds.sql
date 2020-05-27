@@ -1,3 +1,5 @@
+-- This seeds.sql file represents the intial database that we use to setup in the table
+
 USE burgers_db;
 
 INSERT INTO burgers (burger_name, devoured)

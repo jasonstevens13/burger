@@ -1,8 +1,7 @@
+// Import mysql connections=
 const connection = require("../config/connection.js");
 
-
-
-// Helper function for SQL syntax courtesy of Trilogy.
+// Helper function for SQL syntax courtesy of Trilogy edu and described in the following comments:
 // Let's say we want to pass 3 values into the mySQL query.
 // In order to write the query, we need 3 question marks.
 // The above helper function loops through and creates an array of question marks - ["?", "?", "?"] - and turns it into a string.
@@ -46,16 +45,8 @@ function objToSql(ob) {
 
 // Object for all our SQL statement functions.
 const orm = {
-    // selectAll: (cb) => {
-    //     let queryString = "SELECT * FROM burgers;";
-    //     connection.query(queryString, function (err, result) {
-    //         if (err) {
-    //             throw err;
-    //         }
-    //         cb(result);
-    //     });
-    // },
 
+    // mysql select * command
     selectAll: function (cb) {
         var queryString = "SELECT * FROM burgers;";
         connection.query(queryString, function (err, result) {
@@ -66,22 +57,7 @@ const orm = {
         });
     },
 
-
-
-    // insertOne: (burger, cb) => {
-    //     let queryString = "INSERT INTO burgers (burger_name, devoured) VALUES (?,?);";
-    //     burger.devoured = 0;
-    //     connection.query(queryString, [
-    //         burger.burger_name, burger.devoured
-    //     ], function (err, result) {
-    //         if (err) {
-    //             throw err;
-    //         }
-    //         cb(result);
-    //     });
-    // },
-
-
+    // mysql insert statement (inserts one new record/row)
     insertOne: function (cols, vals, cb) {
         var queryString = "INSERT INTO burgers";
 
@@ -103,21 +79,7 @@ const orm = {
         });
     },
 
-    // updateOne: (burger, cb) => {
-    //     let queryString = "UPDATE burgers SET devoured=1 WHERE id=?;";
-
-    //     connection.query(queryString, [
-    //         burger.burger_name, burger.devoured
-    //     ], function (err, result) {
-    //         if (err) {
-    //             throw err;
-    //         }
-
-    //         cb(result);
-    //     });
-    // }
-
-
+    // mysql update one command to update one row
     updateOne: function (objColVals, condition, cb) {
         var queryString = "UPDATE burgers SET ";
 

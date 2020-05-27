@@ -1,14 +1,14 @@
-// Make sure we wait to attach our handlers until the DOM is fully loaded.
+// Making sure we wait to attach our handlers until the DOM is fully loaded. Using jquery here...
 $(function () {
 
+    // when a burger's button is clicked we will change the data and send the update back to the table in the database
     $(".change-devoured").on("click", function (event) {
         let id = $(this).data("id");
         let newDevoured = $(this).data("newdevoured");
 
         let newDevouredState;
 
-        // if statement 
-
+        // if statement here will change the devoured state (which is true or false in the table) to the opposite
         if (newDevoured === false) {
             newDevouredState = {
                 devoured: 1
@@ -20,7 +20,7 @@ $(function () {
         }
 
 
-        // Send the PUT request.
+        // Send the PUT (update) request.
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
             data: newDevouredState
@@ -33,7 +33,7 @@ $(function () {
         );
     });
 
-
+    // creates a new burger in the burgers table of the datbase
     $(".create-form").on("submit", function (event) {
         // Make sure to preventDefault on a submit event.
         event.preventDefault();

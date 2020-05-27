@@ -1,7 +1,10 @@
+// requiring in the express.js npm to create server
 const express = require("express");
 
+// declaring the port variable to allow (in this case heroku) to provide the port if OR use local port 8083
 const PORT = process.env.PORT || 8083;
 
+// declaring the use of express in variable named app
 const app = express();
 
 // Serve static content for the app from the "public" directory in the application directory.
@@ -11,9 +14,10 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Set Handlebars.
+// Requiring in and setting Handlebars to this variable.
 const exphbs = require("express-handlebars");
-
+// setting the default layout to the main.handlebars file (handlebars knows to look for this file in a directory named 
+// 'layouts' within another directory named 'view' at the root. )
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 

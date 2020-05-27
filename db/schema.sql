@@ -1,3 +1,5 @@
+-- This schema file represents the mysql database setup and table creation therein
+
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';
 	
 
